@@ -75,6 +75,7 @@ def run_lm_eval(model_name, task, num_fewshot=1, batch_size=16):
 
 def main():
     parser = argparse.ArgumentParser()
+
     parser.add_argument('model_name', type=str, help='name of the language model to evaluate.')
     parser.add_argument('task', type=str, help='NLP task for evaluation.')
     parser.add_argument('num_fewshot', type=int, default=1, help='number of few-shot examples')
@@ -87,3 +88,7 @@ def main():
 
     with open(args.save_json, 'w') as file:
         json.dump(output, file, indent=4)
+
+
+if __name__ == '__main__':
+    main()
