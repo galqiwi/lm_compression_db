@@ -17,3 +17,5 @@ run_one_task() {
   echo TASK="$TASK"
   python3 run_lm_eval.py --model_name "$PUBLISHER/$MODEL" --save_json "./$PUBLISHER/$MODEL/""$TASK"_"$NUM_FEWSHOT".json --task "$TASK"
 }
+
+run_one_task mmlu_continuation_high_school_government_and_politics 1
