@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#set -eux pipefail
+set -eux pipefail
 
 PUBLISHER="$1"
 echo "$PUBLISHER"
