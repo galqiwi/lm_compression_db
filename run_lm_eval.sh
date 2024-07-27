@@ -2,6 +2,8 @@
 
 set -eux pipefail
 
+echo "$#"
+
 PUBLISHER="$1"
 echo "$PUBLISHER"
 MODEL="$2"
