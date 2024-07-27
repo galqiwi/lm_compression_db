@@ -1,0 +1,69 @@
+{
+    "model_name": "ISTA-DASLab/Meta-Llama-3-8B-AQLM-PV-1Bit-1x16",
+    "config": {
+        "model": "hf",
+        "model_args": "pretrained=ISTA-DASLab/Meta-Llama-3-8B-AQLM-PV-1Bit-1x16",
+        "model_num_parameters": 2042171392,
+        "model_dtype": "torch.float16",
+        "model_revision": "main",
+        "model_sha": "cc0bcb63b4e21d28432f0baf6f01176bac175dd7",
+        "batch_size": "16",
+        "batch_sizes": [],
+        "device": null,
+        "use_cache": null,
+        "limit": null,
+        "bootstrap_iters": 100000,
+        "gen_kwargs": null,
+        "random_seed": 0,
+        "numpy_seed": 1234,
+        "torch_seed": 1234,
+        "fewshot_seed": 1234
+    },
+    "configs": {
+        "piqa": {
+            "task": "piqa",
+            "dataset_path": "piqa",
+            "dataset_kwargs": {
+                "trust_remote_code": true
+            },
+            "training_split": "train",
+            "validation_split": "validation",
+            "doc_to_text": "Question: {{goal}}\nAnswer:",
+            "doc_to_target": "label",
+            "doc_to_choice": "{{[sol1, sol2]}}",
+            "description": "",
+            "target_delimiter": " ",
+            "fewshot_delimiter": "\n\n",
+            "num_fewshot": 1,
+            "metric_list": [
+                {
+                    "metric": "acc",
+                    "aggregation": "mean",
+                    "higher_is_better": true
+                },
+                {
+                    "metric": "acc_norm",
+                    "aggregation": "mean",
+                    "higher_is_better": true
+                }
+            ],
+            "output_type": "multiple_choice",
+            "repeats": 1,
+            "should_decontaminate": true,
+            "doc_to_decontamination_query": "goal",
+            "metadata": {
+                "version": 1.0
+            }
+        }
+    },
+    "results": {
+        "piqa": {
+            "acc,none": 0.7856365614798694,
+            "acc_stderr,none": 0.009574842136050999,
+            "acc_norm,none": 0.7965179542981502,
+            "acc_norm_stderr,none": 0.009393041784049939,
+            "alias": "piqa"
+        }
+    },
+    "model_size": 4084350976
+}
