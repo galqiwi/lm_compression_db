@@ -1,9 +1,11 @@
 #!/bin/bash
 
-set -eu pipefail
+#set -eux pipefail
 
-PUBLISHER=$1
-MODEL=$2
+PUBLISHER="$1"
+echo "$PUBLISHER"
+MODEL="$2"
+echo "$MODEL"
 
 mkdir -p "./$PUBLISHER/$MODEL"
 
