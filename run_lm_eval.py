@@ -4,6 +4,7 @@ import json
 import os
 import tempfile
 from transformers import AutoModelForCausalLM
+import argparse
 
 
 def exec_command(command, env=None) -> str:
