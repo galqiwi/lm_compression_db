@@ -81,7 +81,7 @@ def main():
     parser.add_argument('task', type=str, help='NLP task for evaluation.')
     parser.add_argument('num_fewshot', type=int, default=1, help='number of few-shot examples')
     parser.add_argument('batch_size', type=int, default=16, help='batch size for evaluation')
-    parser.add_argument('save_json', type=str, required=True, help='path to json output')
+    parser.add_argument('save_json', type=str, help='path to json output')
 
     args = parser.parse_args()
 
