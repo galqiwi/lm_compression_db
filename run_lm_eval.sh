@@ -18,8 +18,6 @@ run_one_task() {
   python3 run_lm_eval.py --model_name "$PUBLISHER/$MODEL" --save_json "./models/$PUBLISHER/$MODEL/""$TASK"_"$NUM_FEWSHOT".json --task "$TASK"
 }
 
-winogrande,piqa,hellaswag,arc_easy,arc_challenge,mmlu
-
 run_one_task winogrande 1
 run_one_task piqa 1
 run_one_task hellaswag 1
