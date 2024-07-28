@@ -60,9 +60,9 @@ def run_lm_eval(model_name, task, num_fewshot=1, batch_size=16):
             return entries[0]
 
         path = tmpdirname
-        path = os.path.join(path, get_ony_dir_entry(path))
-        path = os.path.join(path, get_ony_dir_entry(path))
-
+        while os.path.isdir(path):
+            path = os.path.join(path, get_ony_dir_entry(path))
+    
         with open(path, 'r') as file:
             output = trim_lm_eval_output(json.load(file))
 
